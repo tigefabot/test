@@ -1,0 +1,24 @@
+{
+  "name": "tigefabot",
+  "version": "0.0.1",
+  "description": "test api :penguin::rocket:",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "hubot": "^2.19.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tigefabot/test.git"
+  },
+  "author": "sugeng tigefa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tigefabot/test/issues"
+  },
+  "homepage": "https://github.com/tigefabot/test#readme"
+}
