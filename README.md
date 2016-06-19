@@ -1,3 +1,3 @@
 # test
 
-test api :penguin::rocket:
+test api :sparkling_heart::penguin::rocket:
