@@ -1,7 +1,7 @@
 {
-  "name": "hubot-testing-boilerplate",
+  "name": "hubot-tigefabot",
   "version": "0.1.0",
-  "author": "Andrew Mussey",
+  "author": "Sugeng Tigefa",
   "description": "A starter set of tests for Github's Hubot.",
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script/register tests"
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/amussey/hubot-testing-boilerplate.git"
+    "url": "https://github.com/tigefabot/test.git"
   },
   "keywords": [
     "testing",
@@ -38,7 +38,7 @@
     "ci"
   ],
   "bugs": {
-    "url": "https://github.com/amussey/hubot-testing-boilerplate/issues"
+    "url": "https://github.com/tigefabot/test/issues"
   },
-  "homepage": "https://github.com/amussey/hubot-testing-boilerplate"
+  "homepage": "https://github.com/tigefabot/test"
 }
