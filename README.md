@@ -1,3 +1,3 @@
 # test
 
-test api :sparkling_heart::penguin::books::grin::rocket:
+test api :sparkling_heart::penguin::books::calendar::grin::rocket:
