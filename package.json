@@ -1,6 +1,6 @@
 {
   "name": "hubot-tigefabot",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "author": "Sugeng Tigefa",
   "description": "A starter set of tests for Github's Hubot.",
   "scripts": {
