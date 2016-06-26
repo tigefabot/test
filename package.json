@@ -2,6 +2,7 @@
   "name": "hubot-tigefabot",
   "version": "0.0.1",
   "author": "Sugeng Tigefa",
+  "license": "MIT",
   "description": "A starter set of tests for Github's Hubot.",
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script/register tests"
