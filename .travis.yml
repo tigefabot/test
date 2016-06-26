@@ -3,3 +3,11 @@ dist: trusty
 language: node_js
 node_js:
   - "0.10"
+services:
+  - redis
+notifications:
+  email: false
+cache:
+  directories:
+    - node_modules
+    
