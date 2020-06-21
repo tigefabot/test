@@ -11,9 +11,9 @@ ffmpeg_task:
     - apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip
     - apt-get install -yqq wget aria2 ffmpeg telnet tree
   test_script:
-#    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/17B405C6616C7F5E1B5B857812CE26EC63440543"
-    - "aria2c --check-certificate=false --header 'Host: fr13.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/133681472' --header 'Upgrade-Insecure-Requests: 1' 'https://fr13.seedr.cc/ff_get/688558360/Fast.And.Fierce.Death.Race.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4?st=ubjE2-cREtf_Jv8-H0mFrA&e=1592840824' --out 'Fast.And.Fierce.Death.Race.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4'"
-    - ffmpeg -i "Fast.And.Fierce.Death.Race.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Fast And Fierce Death Race 2020" -preset veryfast Fast.And.Fierce.Death.Race.2020.720p.WEBRip.x265.mp4
+#    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://onejav.com/torrent/stars239/download/140151/onejav.com_stars239.torrent"
+    - "aria2c --check-certificate=false --header 'Host: nl36.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/133681395' --header 'Upgrade-Insecure-Requests: 1' 'https://nl36.seedr.cc/ff_get/688557892/Ouija.Shark.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4?st=mLmkAcqz1rOQuT_jRnEyxA&e=1592852703' --out 'Ouija.Shark.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4'
+    - ffmpeg -i "Ouija.Shark.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Ouija Shark 2020" -preset veryfast Ouija.Shark.2020.720p.WEBRip.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "Fast.And.Fierce.Death.Race.2020.720p.WEBRip.x265.mp4"
+    path: "Ouija.Shark.2020.720p.WEBRip.x265.mp4"
