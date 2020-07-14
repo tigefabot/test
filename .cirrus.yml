@@ -1,5 +1,5 @@
 container:
-  image: "docker.pkg.github.com/tigefabot/test/ffmpeg"
+  image: "docker.pkg.github.com/tigefabot/test/ffmpeg:latest"
   cpu: 8
   memory: 21
 
