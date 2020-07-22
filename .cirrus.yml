@@ -12,8 +12,8 @@ ffmpeg_task:
     - apt-get install -yqq wget aria2 ffmpeg telnet tree
   test_script:
 #    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://onejav.com/torrent/ofje253/download/569618/onejav.com_ofje253.torrent"
-    - "aria2c --check-certificate=false --header 'Host: fr8.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/137181575' --header 'Upgrade-Insecure-Requests: 1' 'https://fr8.seedr.cc/ff_get/709242837/The.King.Of.Staten.Island.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4?st=ksqz4Y84iEsOaFCc7OWMgw&e=1595436847' --out 'The.King.Of.Staten.Island.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4'"
-    - ffmpeg -i "The.King.Of.Staten.Island.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="The King Of Staten Island 2020" -preset veryfast The.King.Of.Staten.Island.2020.720p.WEBRip.x265.mp4
+    - "aria2c --check-certificate=false --header 'Host: fr11.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/137287509' --header 'Upgrade-Insecure-Requests: 1' 'https://fr11.seedr.cc/ff_get/709863815/Coma.2019.720p.BluRay.x264.AAC-[YTS.MX].mp4?st=HbKfV8Ct5TeDmrZwkbzmew&e=1595525960' --out 'Coma.2019.720p.BluRay.x264.AAC-[YTS.MX].mp4'"
+    - ffmpeg -i "Coma.2019.720p.BluRay.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Coma 2019" -preset veryfast Coma.2019.720p.BluRay.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "The.King.Of.Staten.Island.2020.720p.WEBRip.x265.mp4"
+    path: "Coma.2019.720p.BluRay.x265.mp4"
