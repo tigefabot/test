@@ -11,9 +11,9 @@ ffmpeg_task:
     - apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip
     - apt-get install -yqq wget aria2 ffmpeg telnet tree
   test_script:
-#    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://onejav.com/torrent/ofje253/download/569618/onejav.com_ofje253.torrent"
-    - "aria2c --check-certificate=false --header 'Host: nl17.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/137390741' --header 'Upgrade-Insecure-Requests: 1' 'https://nl17.seedr.cc/ff_get/710443325/The.Larva.Island.Movie.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4?st=JZY74nIgAR0RP22LOrhueg&e=1595609141' --out 'The.Larva.Island.Movie.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4'"
-    - ffmpeg -i "The.Larva.Island.Movie.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="The Larva Island Movie 2020" -preset veryfast The.Larva.Island.Movie.2020.720p.WEBRip.x265.mp4
+    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/D808D7E38A43BC2D493D420480E1FC7FF3E99252"
+#    - "aria2c --check-certificate=false aria2c --header 'Host: nl36.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/137625438' --header 'Upgrade-Insecure-Requests: 1' 'https://nl36.seedr.cc/ff_get/711776466/PPPD-860.mp4?st=W64u_pRTS9nPW7pYVIcI4g&e=1595781163' --out 'PPPD-860.mp4'"
+    - ffmpeg -i "Milea (2020) [720p] [WEBRip] [YTS.MX]/Milea.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Milea 2020" -preset veryfast Milea.2020.720p.WEBRip.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "The.Larva.Island.Movie.2020.720p.WEBRip.x265.mp4"
+    path: "Milea.2020.720p.WEBRip.x265.mp4"
