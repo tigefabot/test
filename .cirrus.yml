@@ -9,11 +9,11 @@ ffmpeg_task:
     - apt-get update
     - apt-get dist-upgrade -yqq
     - apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip
-    - apt-get install -yqq wget aria2 ffmpeg telnet tree
+    - apt-get install -yqq wget aria2 ffmpeg telnet tree lshw
   test_script:
-    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/D808D7E38A43BC2D493D420480E1FC7FF3E99252"
-#    - "aria2c --check-certificate=false aria2c --header 'Host: nl36.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/137625438' --header 'Upgrade-Insecure-Requests: 1' 'https://nl36.seedr.cc/ff_get/711776466/PPPD-860.mp4?st=W64u_pRTS9nPW7pYVIcI4g&e=1595781163' --out 'PPPD-860.mp4'"
-    - ffmpeg -i "Milea (2020) [720p] [WEBRip] [YTS.MX]/Milea.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Milea 2020" -preset veryfast Milea.2020.720p.WEBRip.x265.mp4
+#    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/D808D7E38A43BC2D493D420480E1FC7FF3E99252"
+    - "aria2c --check-certificate=false --header 'Host: nl32.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/137512639' --header 'Upgrade-Insecure-Requests: 1' 'https://nl32.seedr.cc/ff_get/711141195/AVSA-136.mp4?st=9hByK46uF0eeDGELDIJbbg&e=1595699328' --out 'AVSA-136.mp4'"
+    - ffmpeg -i "AVSA-136.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Jesse Ema Grande" -preset veryfast -s 960x540 AVSA-136-x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "Milea.2020.720p.WEBRip.x265.mp4"
+    path: "AVSA-136-x265.mp4"
