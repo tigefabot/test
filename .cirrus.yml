@@ -12,8 +12,8 @@ ffmpeg_task:
     - apt-get install -yqq wget aria2 ffmpeg telnet tree lshw
   test_script:
 #    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/D808D7E38A43BC2D493D420480E1FC7FF3E99252"
-    - "aria2c --check-certificate=false --header 'Host: nl36.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/138080276' --header 'Upgrade-Insecure-Requests: 1' 'https://nl36.seedr.cc/ff_get/714559243/FriendButMarried.2018.720p.WEBRip.x264.AAC-[YTS.MX].mp4?st=UgOH8gFQ0uc49a6TPGRfcg&e=1596128973' --out 'FriendButMarried.2018.720p.WEBRip.x264.AAC-[YTS.MX].mp4'"
-    - ffmpeg -i "FriendButMarried.2018.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Friend But Married 2018" -preset veryfast FriendButMarried.2018.720p.WEBRip.x265.mp4
+    - "aria2c --check-certificate=false --header 'Host: nl28.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/138080646' --header 'Upgrade-Insecure-Requests: 1' 'https://nl28.seedr.cc/ff_get/714561293/Sabrina.2018.720p.WEBRip.x264-[YTS.LT].mp4?st=CrzPGKfY21SEWT62MsOHbw&e=1596129475' --out 'Sabrina.2018.720p.WEBRip.x264-[YTS.LT].mp4'"
+    - ffmpeg -i "Sabrina.2018.720p.WEBRip.x264-[YTS.LT].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Sabrina 2018" -preset veryfast Sabrina.2018.720p.WEBRip.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "FriendButMarried.2018.720p.WEBRip.x265.mp4"
+    path: "Sabrina.2018.720p.WEBRip.x265.mp4"
