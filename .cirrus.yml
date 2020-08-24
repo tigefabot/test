@@ -12,8 +12,8 @@ ffmpeg_task:
     - apt-get install -yqq wget aria2 ffmpeg telnet tree lshw
   test_script:
 #    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/F139C39FD3D1A94CC980BD863659EA225A0AAA4A"
-    - "aria2c --check-certificate=false 'http://103.126.226.135:8080/download/EuroGirlsOnGirls.19.06.20.Lucie.Wilde.And.Kyra.Hot.Busty.Babes.Bang.In.Prison..480p.MP4-XXX/9879d1_1080_8000_Lucie+Wilde+and+Kyra+Hot_._Busty+Babes+Bang+in+Prison.mp4'"
-    - ffmpeg -i "9879d1_1080_8000_Lucie+Wilde+and+Kyra+Hot_._Busty+Babes+Bang+in+Prison.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Lucie Wilde and Kyra Hot" -preset veryfast Lucie.Wilde.and.Kyra.Hot.Busty.Babes.Bang.in.Prison.x265.mp4
+    - "aria2c --check-certificate=false 'http://103.126.226.135:8080/download/NewSensations.20.06.05.Dylann.Vox..480p.MP4-XXX/newsensations.20.06.05.dylann.vox.mp4'"
+    - ffmpeg -i "newsensations.20.06.05.dylann.vox.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Dylann Vox" -preset veryfast newsensations.20.06.05.dylann.vox.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "Lucie.Wilde.and.Kyra.Hot.Busty.Babes.Bang.in.Prison.x265.mp4"
+    path: "newsensations.20.06.05.dylann.vox.x265.mp4"
