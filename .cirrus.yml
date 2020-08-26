@@ -11,9 +11,9 @@ ffmpeg_task:
     - apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip
     - apt-get install -yqq wget aria2 ffmpeg telnet tree lshw
   test_script:
-    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/046A5EB9DBAC712036AC1889F5073BD7F19950FF"
+    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/EE4F0CFC86895A768A530344A33D8EDEFBB64DED"
 #    - "aria2c --check-certificate=false 'http://103.126.226.135:8080/download/NewSensations.20.06.05.Dylann.Vox..480p.MP4-XXX/newsensations.20.06.05.dylann.vox.mp4'"
-    - ffmpeg -i "Secret Zoo (2020) [720p] [BluRay] [YTS.MX]/Secret.Zoo.2020.720p.BluRay.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Secret Zoo 2020" -preset veryfast Secret.Zoo.2020.720p.BluRay.x265.mp4
+    - ffmpeg -i "Hard Kill (2020) [720p] [WEBRip] [YTS.MX]/Hard.Kill.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Hard Kill 2020" -preset veryfast Hard.Kill.2020.720p.WEBRip.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "Secret.Zoo.2020.720p.BluRay.x265.mp4"
+    path: "Hard.Kill.2020.720p.WEBRip.x265.mp4"
