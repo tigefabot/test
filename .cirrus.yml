@@ -11,9 +11,9 @@ ffmpeg_task:
     - apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip
     - apt-get install -yqq wget aria2 ffmpeg telnet tree lshw
   test_script:
-    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/675435ABAEB41A68939208A628955E7C479B7651"
+    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://onejav.com/torrent/miaa311/download/966580/onejav.com_miaa311.torrent"
 #    - "aria2c --check-certificate=false 'http://103.126.226.135:8080/download/NewSensatins.20.06.05.Dylann.Vox..480p.MP4-XXX/newsensations.20.06.05.dylann.vox.mp4'"
-    - ffmpeg -i "Time To Hunt (2020) [720p] [WEBRip] [YTS.MX]/Time.To.Hunt.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="Time To Hunt 2020" -preset veryfast Time.To.Hunt.2020.720p.WEBRip.x265.mp4
+    - ffmpeg -i "MIAA-311.mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="Nene Tanaka" -preset veryfast -s 960x540 MIAA-311.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "Time.To.Hunt.2020.720p.WEBRip.x265.mp4"
+    path: "MIAA-311.x265.mp4"
