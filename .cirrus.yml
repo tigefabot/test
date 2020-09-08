@@ -12,8 +12,8 @@ ffmpeg_task:
     - apt-get install -yqq wget aria2 ffmpeg telnet tree lshw
   test_script:
 #    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/7419B90D45604F33E24CE071B28932EE17BE1055"
-    - "aria2c --check-certificate=false --header 'Host: fr14.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/142402604' --header 'Upgrade-Insecure-Requests: 1' 'https://fr14.seedr.cc/ff_get/740412256/Juhong.Geulshi.2004.720p.BluRay.x264.AAC-[YTS.MX].mp4?st=5u-D3qx5ceFVEt4aWVJDCg&e=1599596213' --out 'Juhong.Geulshi.2004.720p.BluRay.x264.AAC-[YTS.MX].mp4'"
-    - ffmpeg -i "Juhong.Geulshi.2004.720p.BluRay.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="Juhong Geulshi 2004" -preset veryfast Juhong.Geulshi.2004.720p.BluRay.x265.mp4
+    - "aria2c --check-certificate=false --header 'Host: fr8.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/142491969' --header 'Upgrade-Insecure-Requests: 1' 'https://fr8.seedr.cc/ff_get/740936813/Believer.2018.720p.BluRay.x264.AAC-[YTS.MX].mp4?st=FBTH5oVRg2eGrcWXfZSYbA&e=1599673689' --out 'Believer.2018.720p.BluRay.x264.AAC-[YTS.MX].mp4'"
+    - ffmpeg -i "Believer.2018.720p.BluRay.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="Believer 2018" -preset veryfast Believer.2018.720p.BluRay.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "Juhong.Geulshi.2004.720p.BluRay.x265.mp4"
+    path: "Believer.2018.720p.BluRay.x265.mp4"
