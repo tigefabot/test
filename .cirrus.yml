@@ -12,8 +12,8 @@ ffmpeg_task:
     - apt-get install -yqq wget aria2 ffmpeg telnet tree
   test_script:
 #    - aria2c "http://103.27.207.48/download/%EC%95%85%EC%9D%98%EA%BD%83%20-%20%EA%B9%A8%EC%96%B4%EB%82%9C%20%EC%A7%84%EC%8B%A4.E01.200903.720p-NEXT.mp4"
-    - "aria2c --check-certificate=false --header 'Host: nl28.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/144398491' --header 'Upgrade-Insecure-Requests: 1' 'https://nl28.seedr.cc/ff_get/753176643/Saem.2017.720p.WEBRip.x264.AAC-[YTS.MX].mp4?st=rDQga2z6ZLqG4lZrQ_Gq4Q&e=1601236182' --out 'Saem.2017.720p.WEBRip.x264.AAC-[YTS.MX].mp4'"
-    - ffmpeg -i "Saem.2017.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="Saem 2017" -preset veryfast Saem.2017.720p.WEBRip.x265.mp4
+    - "aria2c --check-certificate=false --header 'Host: nl28.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:81.0) Gecko/20100101 Firefox/81.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/145391226' --header 'Upgrade-Insecure-Requests: 1' 'https://nl28.seedr.cc/ff_get/759422513/Kim.Ji-young.Born.1982.2019.720p.WEBRip.x264.AAC-[YTS.MX].mp4?st=J9Pj6-Sr3i7S5fZqItCNiw&e=1602020465' --out 'Kim.Ji-young.Born.1982.2019.720p.WEBRip.x264.AAC-[YTS.MX].mp4'"
+    - ffmpeg -i "Kim.Ji-young.Born.1982.2019.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="Kim Ji-young Born 1982 2019" -preset veryfast Kim.Ji-young.Born.1982.2019.720p.WEBRip.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "Saem.2017.720p.WEBRip.x265.mp4"
+    path: "Kim.Ji-young.Born.1982.2019.720p.WEBRip.x265.mp4"
