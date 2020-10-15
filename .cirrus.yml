@@ -11,9 +11,9 @@ ffmpeg_task:
     - apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip
     - apt-get install -yqq wget aria2 ffmpeg telnet tree
   test_script:
-#    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/418BD6355EED29021E8600986637F9A53CF76F3D"
-    - "aria2c --check-certificate=false --header 'Host: de16.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:81.0) Gecko/20100101 Firefox/81.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/146053269' --header 'Upgrade-Insecure-Requests: 1' 'https://de16.seedr.cc/ff_get/763793156/The.Avengers.2012.720p.BluRay.x264.YIFY.mp4?st=4Xz1jFEQe-eXg6tzIqlA1w&e=1602530961' --out 'The.Avengers.2012.720p.BluRay.x264.YIFY.mp4'"
-    - ffmpeg -i "The.Avengers.2012.720p.BluRay.x264.YIFY.mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="The Avengers 2012" -preset veryfast The.Avengers.2012.720p.BluRay.x265.mp4
+    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/6197AFD841A13C253172F63A27D155571D20E8E1"
+#    - "aria2c --check-certificate=false --header 'Host: de16.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:81.0) Gecko/20100101 Firefox/81.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/146053277' --header 'Upgrade-Insecure-Requests: 1' 'https://de16.seedr.cc/ff_get/763793176/Avengers.Age.of.Ultron.2015.720p.BluRay.x264.YIFY.mp4?st=8G40P25GkkGMjliLQU5Rzg&e=1602531078' --out 'Avengers.Age.of.Ultron.2015.720p.BluRay.x264.YIFY.mp4'"
+    - ffmpeg -i "Ben 10 Vs. The Universe The Movie (2020) [720p] [WEBRip] [YTS.MX]/Ben.10.Vs..The.Universe.The.Movie.2020.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="Ben 10 Vs. The Universe The Movie 2020" -preset veryfast Ben.10.Vs..The.Universe.The.Movie.2020.720p.WEBRip.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "The.Avengers.2012.720p.BluRay.x265.mp4"
+    path: "Ben.10.Vs..The.Universe.The.Movie.2020.720p.WEBRip.x265.mp4"
