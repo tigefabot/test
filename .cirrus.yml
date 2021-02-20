@@ -11,9 +11,9 @@ ffmpeg_task:
     - apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip
     - apt-get install -yqq wget aria2 ffmpeg telnet tree
   downloading_script:
-    - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 https://www.dropbox.com/s/dl/j0c1isaes19k0r8/FC2-PPV-1693377.mp4"
+    - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 https://www.dropbox.com/s/dl/wcjc912clk6oef7/PPPD-903.mp4"
   rendering_script:
-    - ffmpeg -i "FC2-PPV-1693377.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Susamaji Imako" -preset veryfast -pix_fmt yuv420p10le -s 1280x720 FC2-PPV-1693377.x265.mp4
+    - ffmpeg -i "PPPD-903.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Hitomi Tanaka" -preset veryfast -pix_fmt yuv420p10le PPPD-903.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "FC2-PPV-1693377.x265.mp4"
+    path: "PPPD-903.x265.mp4"
