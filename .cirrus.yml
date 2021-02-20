@@ -13,7 +13,7 @@ ffmpeg_task:
   downloading_script:
     - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 --header 'Host: fr5.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/161011397' --header 'Upgrade-Insecure-Requests: 1' 'https://fr5.seedr.cc/ff_get/854591168/Violet.Evergarden.Eternity.And.The.Auto.Memories.Doll.2019.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4?st=A-x7E2ud0RcQNQoPzTpNMg&e=1613924568' --out 'Violet.Evergarden.Eternity.And.The.Auto.Memories.Doll.2019.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4'"
   rendering_script:
-    - ffmpeg -i "Violet.Evergarden.Eternity.And.The.Auto.Memories.Doll.2019.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Violet Evergarden Eternity and the Auto Memories Doll" -preset veryfast -pix_fmt yuv420p10le Violet.Evergarden.Eternity.And.The.Auto.Memories.Doll.2019.1080p.BluRay.x265.mp4
+    - ffmpeg -i "Violet.Evergarden.Eternity.And.The.Auto.Memories.Doll.2019.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Violet Evergarden Eternity and the Auto Memories Doll" -preset veryfast Violet.Evergarden.Eternity.And.The.Auto.Memories.Doll.2019.1080p.BluRay.x265.mp4
     - ls -hal
   binaries_artifacts:
     path: "Violet.Evergarden.Eternity.And.The.Auto.Memories.Doll.2019.1080p.BluRay.x265.mp4"
