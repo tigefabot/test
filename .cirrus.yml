@@ -1,6 +1,6 @@
 container:
   image: "registry.gitlab.com/tigefa/ffmpeg"
-  cpu: 32
+  cpu: 16
   memory: 32
 
 ffmpeg_task:
