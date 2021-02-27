@@ -11,9 +11,9 @@ ffmpeg_task:
     - apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip
     - apt-get install -yqq wget aria2 ffmpeg telnet tree
   downloading_script:
-    - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 --header 'Host: fr13.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/161461171' --header 'Upgrade-Insecure-Requests: 1' 'https://fr13.seedr.cc/ff_get/857157206/Sisyphus.The.Myth.S01E03.1080p.NF.WEB-DL.DDP2.0.x264-Imagine.mkv?st=YnbFT0NhgyTFjXfDGIl3Dg&e=1614272258' --out 'Sisyphus.The.Myth.S01E03.1080p.NF.WEB-DL.DDP2.0.x264-Imagine.mkv'"
+    - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 --header 'Host: fr15.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/161756117' --header 'Upgrade-Insecure-Requests: 1' 'https://fr15.seedr.cc/ff_get/858772430/The.Penthouse.S02E03.1080p.WEB-DL.H264.AAC-AppleTor.mp4?st=tX2-46JI60VdCzbRT0uXBQ&e=1614493045' --out 'The.Penthouse.S02E03.1080p.WEB-DL.H264.AAC-AppleTor.mp4'"
   rendering_script:
-    - ffmpeg -i "Sisyphus.The.Myth.S01E03.1080p.NF.WEB-DL.DDP2.0.x264-Imagine.mkv" -threads 16 -c:v libx265 -c:a copy -metadata title="Sisyphus The Myth Episode 3" -preset veryfast -pix_fmt yuv420p10le -s 1280x720 03.mkv
+    - ffmpeg -i "The.Penthouse.S02E03.1080p.WEB-DL.H264.AAC-AppleTor.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="The Penthouse Season 2 Episode 3" -preset veryfast -pix_fmt yuv420p10le -s 1280x720 The.Penthouse.S02E03.1080p.WEB-DL.H264.AAC-AppleTor.mkv
     - ls -hal
   binaries_artifacts:
-    path: "03.mkv"
+    path: "The.Penthouse.S02E03.1080p.WEB-DL.H264.AAC-AppleTor.mkv"
