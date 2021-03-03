@@ -11,9 +11,9 @@ ffmpeg_task:
     - apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip
     - apt-get install -yqq wget aria2 ffmpeg telnet tree
   downloading_script:
-    - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 --header 'Host: fr11.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/162174651' --header 'Upgrade-Insecure-Requests: 1' 'https://fr11.seedr.cc/ff_get/861166722/i.e190903cawpm.mp4?st=I3tMwYr-YZAnT5PdFN7BzQ&e=1614794492' --out 'i.e190903cawpm.mp4'"
+    - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 --header 'Host: nw1.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/162268646' --header 'Upgrade-Insecure-Requests: 1' 'https://nw1.seedr.cc/ff_get/861717728/Sisyphus.The.Myth.S01E05.1080p.NF.WEB-DL.DDP2.0.x264-Imagine.mkv?st=qaHTkXKvi6ietyQxAX-knQ&e=1614875626' --out 'Sisyphus.The.Myth.S01E05.1080p.NF.WEB-DL.DDP2.0.x264-Imagine.mkv'"
   rendering_script:
-    - ffmpeg -i "i.e190903cawpm.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Erito 19.09.03 Celeb Azumi Wants Pussy Massage" -preset veryfast -pix_fmt yuv420p10le -s 1280x720 i.e190903cawpm.x265.mp4
+    - ffmpeg -i "Sisyphus.The.Myth.S01E05.1080p.NF.WEB-DL.DDP2.0.x264-Imagine.mkv" -threads 16 -c:v libx265 -c:a copy -metadata title="Sisyphus The Myth Episode 5" -preset veryfast -pix_fmt yuv420p10le -s 1280x720 05.mkv
     - ls -hal
   binaries_artifacts:
-    path: "i.e190903cawpm.x265.mp4"
+    path: "05.mkv"
