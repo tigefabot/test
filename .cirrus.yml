@@ -11,9 +11,9 @@ ffmpeg_task:
     - apt-get install -yqq sudo lsb-base lsb-release apt-transport-https ca-certificates software-properties-common wget curl netcat aria2 whois figlet p7zip p7zip-full zip unzip
     - apt-get install -yqq wget aria2 ffmpeg telnet tree
   downloading_script:
-    - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 https://www.dropbox.com/s/dl/0uc9n670qio6txk/MIDE-225_uncensored.mp4"
+    - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 https://www.dropbox.com/s/dl/ns9nnk1h1ive7m7/DVAJ-504.mp4"
   rendering_script:
-    - ffmpeg -i "MIDE-225_uncensored.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Anri Okita" -preset veryfast -pix_fmt yuv420p10le -s 1280x720 MIDE-225.x265.mp4
+    - ffmpeg -i "DVAJ-504.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Ruka Inaba" -preset veryfast -pix_fmt yuv420p10le -s 1280x720 DVAJ-504.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "MIDE-225.x265.mp4"
+    path: "DVAJ-504.x265.mp4"
