@@ -1,7 +1,7 @@
 container:
   image: "registry.gitlab.com/tigefa/ffmpeg"
-  cpu: 16
-  memory: 32
+  cpu: 12
+  memory: 24
 
 ffmpeg_task:
   timeout_in: 120m
