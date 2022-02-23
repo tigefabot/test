@@ -1,0 +1,145 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: jammy
+  pull: always
+  image: ubuntu:22.04
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: ubuntu2110
+  pull: always
+  image: ubuntu:21.10
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: ubuntu2104
+  pull: always
+  image: ubuntu:21.04
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: focal
+  pull: always
+  image: ubuntu:20.04
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: bionic
+  pull: always
+  image: ubuntu:18.04
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: xenial
+  pull: always
+  image: ubuntu:16.04
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: trusty
+  pull: always
+  image: ubuntu:14.04
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: debian
+  pull: always
+  image: debian
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: bookworm
+  pull: always
+  image: debian:bookworm
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: experimental
+  pull: always
+  image: debian:experimental
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: testing
+  pull: always
+  image: debian:testing
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: alpine
+  pull: always
+  image: alpine
+  commands:
+  - apk update
+  - apk upgrade
+  - apk add git
+
+- name: edge
+  pull: always
+  image: alpine:edge
+  commands:
+  - apk update
+  - apk upgrade
+  - apk add git
+
+- name: baseimage
+  pull: always
+  image: tigefa/baseimage
+  commands:
+  - apt update
+  - apt full-upgrade -y
+  - apt install -y sudo apt-utils
+  - apt install -y git
+
+- name: ffmpeg
+  pull: always
+  image: tigefa/ffmpeg
+  commands:
+  - apt update && apt full-upgrade -y
+
+- name: ping
+  pull: always
+  image: redis
+  commands:
+  - redis-cli -h redis ping
+
+services:
+  - name: redis
+    image: redis
